@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title - entre 55 y 65 carácteres-->
+    <title>Curso HTML</title>
+    <meta name="description" content="Aprendiendo los conocimientos básicos de HTML">
+    <!--indica la URL considerada más representativa de un conjunto de páginas duplicadas del sitio web -->
+    <link rel="canonical" href="https://tudominio.com/la-url-canonica">
+    <!--indica la URL relativa de esta página para completar los enlaces
+    <base href="https://tudominio.com/">-->
+    <!--añadir el favicon-->
+    <link rel="icon" href="img/favicon.png">
+    <!--favicon para dispositivos apple-->
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <!--cambiar el color de la barra inicial de los dispositivos móbiles-->
+    <meta name="theme-color" content="#FF6600">
+    <!--meta etiqueta para mostrar un formato enriquecido en redes sociales-->
+    <meta property="og:title" content="Aprendiendo HTML">
+    <meta property="og:description" content="Este es un sitio web para aprender los fundaments de HTML">
+    <meta property="og:image" content="https://tudominio.com/img/logo.png">
+    <meta property="og:url" content="https://tudominio.com">
+    <!--meta etiquetas para Twitter-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@alexbaes">
+    <!--enlazar estilos CSS en el propio HTML-->
+    <!--enlazar estilos en una hoja de CSS-->
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        span { color: green; }
+                
+    </style>
+
+</head>
+<body>
+    <!--Esta es la manera de crear comentarios en HTML-->
+    <!--
+        Enlaces de interés
+            - https://www.w3.org/html/
+            - https://html.spec.whatwg.org/
+            - https://www.w3.org/blog/news/archives/7753
+            - https://developer.mozilla.org/es/docs/Web/HTML
+            - https://htmlreference.io/
+            - Caracteres especiales HTML https://desarrolloweb.com/articulos/11.php
+    -->
+    <header>
+        <div><span id="inicio">Guía HTML</span></div>
+        <div><a href="https://github.com/alexbaes" target="_blank">Github</a> </div>
+    </header>
+    <main>
+        <div class="nav">
+            <div class="col">
+                <ul>
+                    <li><a href="index.html#encabezados">Encabezados HTML</a></li>
+                    <li><a href="index.html#textos-basicos">Etiquetas de Texto</a></li>
+                    <li><a href="index.html#etiquetas-saltos">Etiquetas de Saltos y línea</a></li>
+                    <li><a href="index.html#etiquetas-semanticas">Etiquetas Semánticas Estructurales</a></li>
+                    <li><a href="index.html#bloque-linea">Etiquetas de Bloque VS Etiquetas de Línea</a></li>
+                    <li><a href="index.html#estilos-css">Estilos CSS en HTML</a></li>
+                    <li><a href="index.html#scripts-js">Scripts en HTML</a></li>
+                    <li><a href="index.html#imagenes">Imágenes</a></li>
+                    <li><a href="index.html#svg">SVG</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><a href="index.html#figuras">Figuras</a></li>
+                    <li><a href="index.html#listas">Listas</a></li>
+                    <li><a href="index.html#tablas">Tablas</a></li>
+                    <li><a href="index.html#enlaces">Enlaces</a></li>
+                    <li><a href="index.html#elementos-interactivos">Elementos Interactivos</a></li>
+                    <li><a href="index.html#multimedia">Audio y Video</a></li>
+                    <li><a href="index.html#formularios">Formularios</a></li>
+                    <li><a href="index.html#atributos">Atributos</a></li>
+                    <li><a href="index.html#accesibilidad">Accesibilidad Web</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <section>
+            <h2 id="encabezados">Encabezados HTML.</h2>
+            <p>Hay 6 tipos de encabezados de HTML, de H1 a H6, y sólo puede haber un H1 por documento HTML</p>
+            <h1>Encabezado de H1</h1>
+            <h2>Encabezado de H2</h2>
+            <h3>Encabezado de H3</h3>
+            <h4>Encabezado de H4</h4>
+            <h5>Encabezado de H5</h5>
+            <h6>Encabezado de H6</h6>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+
+        </section>
+        <section>
+            <h2 id="textos-basicos">Etiquetas de Texto</h2>
+            <dl>
+                <dt>&lt;p&gt;</dt>
+                <dd>Este es un párrafo de HTML y es un elemento de tipo bloque. Se recomienda dar una separación entre párrafos.</dd>
+                <dt><b>&lt;b&gt; </b></dt>
+                <dd>Se utiliza para <b>llamar la atención</b> del lector al contenido deseado. Se presenta en negrita</dd>
+                <dt><strong>&lt;strong&gt; </strong></dt>
+                <dd>Indica que el contenido seleccionado es <strong>importante y tiene cierta relevancia. </strong> Se presenta en negrita</dd>
+                <dt><em>&lt;em&gt;: </em></dt>
+                <dd>Indica que el contenido seleccionado tiene <em>énfasis</em>. Ej: Hay que ir al médico <em>ya!</em></dd>
+                <dt><i>&lt;i&gt;</i></dt>
+                <dd>Se utiliza para diferenciar un texto, por ejemplo, en el idioma, <i lang="en">if this text is in english</i> o términos técnicos cómo <i>"Homo sapiens"</i>. Se presenta en cursiva</dd>
+                <dt><u>&lt;u&gt;: </u></dt>
+                <dd>Indica que un elemento se representa con una anotación no textual, por ejemplo: esta palabrá está mal <u class="spelling">escrtia</u>. Se presenta en subrayado</dd>
+                <dt>&lt;abbr&gt;</dt>
+                <dd>Indica que el elemento es una abreviatura o un acrónimo, por ejemplo <abbr title="Hypertext Markup Language">HTML</abbr>. Se recomienda añadir el atributo "title".</dd>
+                <dt><cite>&lt;cite&gt;</cite></dt>
+                <dd>Se utiliza para marcar el título de un trabajo creativo citado. Por ejemplo: Puede encontrar más información en <cite>[ISO-0000]</cite> o, escrito <cite>por George Orwell</cite>. Se presenta en cursiva</dd>
+                <dt>&lt;blockquote&gt;</dt>
+                <dd>Indica una cita extendida, por ejemplo: <blockquote cite="https://example.com">La tierra es un punto pálido azul en la inmensidad del universo.<figcaption>-Juan Perez, <cite>El gran libro</cite></figcaption></blockquote>
+                    Se puede añadir el atributo 'cite' para indicar la url del documento de origen, dónde se explica el contexto o referencia de la cita. También suele acompañarse de la etiqueta 'figcaption' i 'cite'. Se presenta con una sangría de texto.
+                </dd>
+                <dt>&lt;q&gt;</dt>
+                <dd>indica que el texto envuleto es una cita breve en línea, también acepta el parámetro 'cite'. Ejemplo: Según Mozilla, <q>Firefox 1.0 se estrenó en 2004</q>. Se presenta con comillas.</dd>
+                <dt><code>&lt;code&gt; </code></dt>
+                <dd>Muestra el contenido con un estilo para indicar que el texto es un fragmento corto de código, por ejemplo: La función <code>selectAll()</code> sirve para... Se presenta con una fuente de tipo 'monoespace'.</dd>
+                <dt>&lt;data&gt;</dt>
+                <dd>Vincula el elemento seleccionado con una traducción legible para la máquina. Por ejemplo: <data value="298">Mini Ketchup</data>. Se acompaña del atributo 'value' y si el contenido esta relacionado con el tiempo se utiliza la etiqueta 'time'.</dd>
+                <dt><s>&lt;s&gt;</s></dt>
+                <dd>Muestra el texto tachado cuando se quiere representar cosas que ya no son relevantes o precisas. No es adecuado para ediciones. Ejemplo: <s>Tickets de venda aquí</s>. Todo vendido!! Se presenta tachando el texto.</dd>
+                <dt>&lt;del&gt;</dt>
+                <dd>Indica que el texto seleccionado ha sido eliminado o se ha modificado. Por ejemplo: El lanzamiento para el <del>martes</del> miércoles estaba preparado. Se presenta tachando el texto.</dd>
+                <dt>&lt;ins&gt;</dt>
+                <dd>Indica que el texto seleccionado ha sido añadido o se ha modificado. Por ejemplo: El lanzamiento para el martes <ins>miércoles</ins> estaba preparado. Se presenta subrayando el texto.</dd>
+                <dt><dfn>&lt;dfn&gt;</dfn></dt>
+                <dd>Se utiliza para indicar el término que se define del contexto de una frase. Por ejemplo, el elemnto <dfn id="definition-dfn">'dfn'</dfn> se utiliza para... Puede tener el atributo 'title' y el 'id' para navegar a la definición. Se presenta en cursiva.</dd>
+                <dt><kbd>&lt;kbd&gt;</kbd></dt>
+                <dd>El elemento seleccionado se indica como entrada textual del usuario desde un teclado, o entrada de voz. Un ejemplo es: Clica <kbd>Ctrl</kbd> + <kbd>Shift</kbd> para navegar. Se presenta con fuente monoespaciada</dd>
+                <dt><samp>&lt;samp&gt;</samp></dt>
+                <dd> Se utiliza para mosrar un texto en línea que representa la salida de muestra de un programa de ordenador. Ejemplo: <samp>Presiona F1 para continuar</samp>. Se presenta en fuente monoespaciada.</dd>
+                <dt><mark>&lt;mark&gt;</mark></dt>
+                <dd>Esta etiqueta remarca o resalta el texto para fines de referencia o notación debido a su relevancia. Por ejemplo, muchas especias de <mark>salamandras</mark> habitan en ...</dd>
+                <dt>&lt;pre&gt;</dt>
+                <dd> El texto dentro de esta etiqueta se representa tal cómo está escrito en HTML, ejemplo: 
+                    <pre>Este texto
+                        se     representa 
+                        de estab
+                        manera
+                    </pre></dd>
+                <dt>&lt;mark&gt;</dt>
+                <dd>Se utiliza para representar pequeñas anotaciones encima, debajo o al lado del texto base a la hora de mostrar la pronuncación de los carácteres (asiáticos normalmente). Ejemplo: 
+                    <ruby>
+                    明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+                    </ruby></dd>
+                <dt>&lt;rp&gt;</dt>
+                <dd>Proporciona paréntesis alternativos para los navegadores que no admiten la visualización de anotaciones Ruby mediante el elemento 'ruby'. Encierra cada uno de los paréntesis de apertura y cierre que envuelven el elemento 'rt'</dd>
+                <dt>&lt;rt&gt;</dt>
+                <dd>Especifica el texto Ruby de la anotación, utilizado para proporcionar informaicón de pronuncación, o traducción de la tipografía de Asia oriental. Ver ejemplo anterior.</dd>
+                <dt><small>&lt;small&gt;</small></dt>
+                <dd>Se utiliza para representar cometnarios secundarios  y letra pequeña, por ejemplo, Sitio creado por Alex Barbera <small>&copy; Derecho de copyright</small></dd>
+                <dt><sub>&lt;sub&gt;</sub></dt>
+                <dd>Especifica que el texto envuleto debe mostrarse cómo subíndice por motivos tipográficos. Ejempolo: La fórmula del agua es H<sub>2</sub>O.</dd>
+                <dt><sup>&lt;sup&gt;</sup></dt>
+                <dd>Especifica que el texto envuleto debe mostrarse cómo superíndice por motivos tipográficos. Ejempolo: La casa tiene 23m<sup>2</sup>.</dd>
+                <dt>&lt;time&gt;</dt> 
+                <dd>Indica un periodo específico de tiempo. Puede incluir el atributo 'datetime'. Ejemplo: El concierto empieza a las <time datetime="20:00">20:00</time></dd>
+                <dt>&lt;var&gt;</dt>
+                <dd> Indica el nombre de una variable en una expresión matemática. Ejemplo: El volumen de una caja es <var>l</var> por <var>w</var> por <var>h</var>. Se presenta en cursiva</dd>
+                <dt>&lt;wbr&gt;</dt>
+                <dd>Permite crear un salto de palabra, es decir, puedes indicar por dónde quieres cortar las palabras si es necesario. Ejemplo: <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</dd>
+                <dt>&lt;bdi&gt;</dt>
+                <dd>Indica al algoritmo bidireccional del navegador que trae el texto que contiene de forma aislada del texto que lo rodea. Útil cuando no se sabe la direccionalidad del texto insertado. Ejemplo: El señor <bdi class="name">الرجل القوي إيان</bdi> ha quedado 3º.</dd>
+                <dt>&lt;bdo&gt;</dt>
+                <dd>Anula la direccionalidad actual del texto, por tanto. Ejemplo: <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span> o <span dir="ltr">אה, אני אוהב להיות ליד חוף הים</span></dd>
+            </dl>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="etiquetas-saltos">Etiquetas de saltos</h2>
+            La etiqueta &lt;br&gt; permite realizar un salto <br>de línea cuando se necesario. Puedes añadir las etqieutas
+            que necesites para dejar<br><br>más espacio si es requerido. 
+            <br>
+            <hr>
+            Por otro lado está la etiqueta &lt;hr&gt; que permite crear una línea separadora de contenido dentro de una sección. Cómo la que está aquí arriba.
+            <br><br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="etiquetas-semanticas">Etiquetas Semánticas Estructurales</h2>
+            <dl>
+                <dt>&lt;html&gt;</dt>
+                <dd>Representa la raíz del document HTML, todos los elementos descienden a partir de esta etiqueta. Se recomienda añadirle el atributo 'lang' para indicar el idioma.</dd>
+                <dt>&lt;head&gt;</dt>
+                <dd>Esta etiqueta contiene la información legible para la máquina (metadatos) sobre el documento, cómo título, scripts i hojas de estilos. Una etiqueta por documento.</dd>
+                <dt>&lt;body&gt;</dt>
+                <dd>Representa el contenido del documento HTML, sólo puede haber una etiqueta 'body'. Se le pueden agregar varios atributos. Solo puede haber una etiqueta por documento.</dd>
+                <dt>&lt;header&gt;</dt>
+                <dd>Representa la sección inicial del documento, el contenido suele ser de navegación, un logotipo, formulario de búsqueda, idiomas, u otros elementos.</dd>
+                <dt>&lt;footer&gt;</dt>
+                <dd>Representa la sección final del documento, el contenido suele ser el autor, copyright, o links del sitio web o externos. Solo puede haber una etiqueta por documento.</dd>
+                <dt>&lt;main&gt;</dt>
+                <dd>Contiene el contenido principal del 'body' de un documento. Sólo puede existir una etiqueta por documento.</dd>
+                <dt>&lt;aside&gt;</dt>
+                <dd>Representa una parte del documento cuyo contenido está indirectamente relacionado con el contenido principal. Suele ubicarse en las barras laterales. </dd>
+                <dt>&lt;section&gt;</dt>
+                <dd>Esta etiqueta sirve para representar una sección independiente genérica del documento, son etiquetas semánticas y casi siempre deben tener un encabezado.</dd>
+                <dt>&lt;article&gt;</dt>
+                <dd>Constituye apartados independientes de un documento, normalmente pensados para reutilizarse o repetirse, cómo un artículo de periódico, entrada de blog, tarjeta de producto, etc </dd>
+                <dt>&lt;nav&gt;</dt>
+                <dd>Su principal propósito es proporcionar enlaces de navegación, cómo los menús, las tablas de contenido y los índices, utilizando enlaces, tanto externos cómo internos.</dd>
+                <dt>&lt;menu&gt;</dt>
+                <dd>Es una alternativa semántica a 'ul', aunque los navegadores lo tratan igual, ya que representa una lista de elementos desordenados.</dd>
+                <dt>&lt;div&gt;</dt>
+                <dd>Es el contenedor genérico de bloque para el contenido. No tiene afecto al diseño ni es semántico</dd>
+                <dt>&lt;span&gt;</dt>
+                <dd>Es un contenedor genérico en línea, suele utilizarse para agrupar elementos y darles estilo, usando atributos class o id.</dd>
+                <dt>&lt;address&gt;</dt>
+                <dd>Sirve para proporcionar información de cotacto para una persona u organización. Suele incluir una dirección, URL, email, teléfono, redes sociales...</dd>
+            </dl>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="bloque-linea">Etiquetas de Bloque VS Etiquetas de Línea</h2>
+            <div>La etiqueta de bloque principal es la div, una etiqueta de bloque es aquella que genera saltos de línea con sus etiquetas hermanas. No puedes añadir dos etiquetas de bloque una al lado de la otra.</div>
+            <span>La etiqueta de línea principal es la span, una etiqueta de línea sólo ocupa el espacio necesario que tiene su contenido. Puedes añadir varias una al lado de la otra.</span>
+            <span>Hola soy otra span</span>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+
+        </section>
+        <section>
+            <h2 id="estilos-css">Estilos CSS en HTML</h2>
+            <p>Hay tres maneras principalmente de añdir estilos al código HTML. Una es añadir los estilos en línea, en el propio código HTML</p>
+            <p>La primera es añadirlo directamente, por ejemplo: este texto es de color <span style="color: red">rojo</span></p>
+            <p>La segunda opción es añadir la etiqueta &lt;style&gt; dentro de la etiqueta &lt;head&gt; del documento e indicar allí los estilos. Por ejemplo, este texto es <span class="verde">verde</span></p>
+            <p>La tercera opción (y recomendada) es añadir un link dentro de la etiqueta &lt;head&gt; a una hoja de estilos externa, cómo en este mismo documento está hecho.</p>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="scripts-js">Scripts en HTML</h2>
+            <p>La etiqueta &lt;script&gt; se utiliza para incrustar código o datos ejecutbles, normalmente código JavaScript. Se puede añadir directamente en la zona del documento HTML que lo necesitemos, o 
+                añadirlo dentro de la etiqueta &lt;style&gt; e importar las hojas de código que necesitemos. Se le pueden añadir varios atributos (para mejorar la optimización) siendo el más utilizado 'src' para 
+                hacer referencia al código que queremos importar.
+            </p>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="imagenes">Imágenes</h2>
+            <img src="img/cohete.png" alt="Despegue de un cohete">
+            <p>Imagen en formato .png</p>
+            <img src="img/iss.jpg" alt="Estación Espacial Internacional">
+            <p>Imagen en formato .jpg</p>
+            <img src="img/gif.gif" alt="Gif de ejemplo">
+            <p>Imagen en formato .gif</p>
+            <img src="img/boat.svg" alt="SVG de ejemplo">
+            <p>Imagen en formato .svg</p>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="svg">SVG</h2>
+            <p>Este es un icono creado con código SVG</p>
+            <!--https://css.gg/adidas-->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill="currentColor" />
+                <path d="M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z" fill="currentColor" />
+                <path d="M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z" fill="currentColor" />
+            </svg>
+          <br>
+          <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="figuras">Figuras y pictures</h2>
+            <p>La etiqueta &lt;figure&gt; representa contenido autónomo, normalmente con la etiquta &lt;figcaption&gt; para indicarle un título</p>
+            <p>También se puede utilizar para envolver code snippets con &lt;pre&gt; y citas con &lt;blockquote&gt;</p>
+            <figure>
+              <img src="img/cohete.png" alt="Despegue de un cohete">
+              <figcaption>Despegue de un cohete</figcaption>
+            </figure>
+            <p>Por otro lado esta la etiqueta &lt;picture&gt; la cual contiene 0 o más elementos &lt;source&gt; y un elemento &lt;img&gt;</p>
+            <p>Así ofrece versiones alternativas de una imagen para diferentes escenarios de visualización o dispositivos.</p>
+            <p>El navegador repasa las diferentes etiquetas &lt;source&gt; y elige la que mejor se adapta. Si no se adaptan o no acepta la etiqueta &lt;picture&gt; utiliza la url de &lt;img&gt;</p>
+            <p>Se pueden utilizar diversos atributos, cómo 'srcet' o 'media' para ajustar las imágenes</p>
+            <picture>
+                <source srcset="img/favicon.png"
+                        media="(min-width: 600px)">
+                <img src="img/cohete.png" alt="Despegue de un cohete">
+            </picture>
+            <p>En este ejemplo, cuando el tamaño del dispositivo es menor de 600 píxeles se muestra una imagen, y si se aumenta el tamaño se muestra otra</p>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="listas">Listas Ordenadas</h2>
+            <h3>Lista ordenada</h3>
+            <p>Con los atributos puedes modificar la lista ordenada, utilizando, 'start', 'reversed' y 'type' </p>
+            <ol>
+              <li>Primavera</li>
+              <li>Verano</li>
+              <li>Otoño</li>
+              <li>Invierno</li>
+            </ol>
+            <p>Empieza a partir del 3 con 'start=3'</p>
+            <ol start="3">
+              <li>Primavera</li>
+              <li>Verano</li>
+              <li>Otoño</li>
+              <li>Invierno</li>
+            </ol>
+            <p>Orden inverso con 'reversed'</p>
+            <ol reversed>
+              <li>Primavera</li>
+              <li>Verano</li>
+              <li>Otoño</li>
+              <li>Invierno</li>
+            </ol>
+            <p>Modifica los números con 'type'. 'a','A','i','I','1'</p>
+            <ol type="i">
+              <li>Primavera</li>
+              <li>Verano</li>
+              <li>Otoño</li>
+              <li>Invierno</li>
+            </ol>
+            <h3>Lista desordenada</h3>
+            <p>Para eliminar o cambiar los estilos de la puntuación se debe hacer con CSS</p>
+            <ul>
+                <li>Terminar de escribir los ejercicios</li>
+                <li>Comprobar que esté todo correcto</li>
+                <li>Entregarlos al profesor</li>
+            </ul>      
+            <h3>Lista descriptivas</h3>
+            <p>Se utilizan para ordenar una serie de elmentos con un título (etiqueta &lt;dt&gt;) y una descripción (etiqueta &lt;dd&gt;)</p>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Es un lenguaje de marcado que define el contenido de la web</dd>
+                <dt>CSS</dt>
+                <dd>ES un lenguaje de definición que da estilos al código HTML</dd>
+                <dt>JavaScript</dt>
+                <dd>Es el lenguaje de la web</dd>
+              </dl>
+              <br>
+              <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="tablas">Tablas</h2>
+            <p>Las tablas están formadas por varias etiquetas, y pueden contener una cabecera (&lt;thead&gt;), un cuerpo (&lt;tbody&gt;) y un pie (&lt;tfoot&gt;)</p>
+            <p>También puede tener un título con la etiqueta &lt;caption&gt; y con &lt;colgroup&gt; se agrupan las columnas de una tabla</p>
+            <p></p>
+            <table>
+                <caption> Tabla completa</caption>
+              <colgroup>
+                <col>
+                <col span="4">    
+            </colgroup>
+              <thead>
+              <tr>
+                <th>Countries</th>
+                <th>Capitals</th>
+                <th>Population</th>
+                <th>Language</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>USA</td>
+                <td>Washington, D.C.</td>
+                <td>309 million</td>
+                <td>English</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Sweden</td>
+                <td>Stockholm</td>
+                <td>9 million</td>
+                <td>Swedish</td>
+              </tr>
+            </tfoot>
+            </table>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="enlaces">Enlaces</h2>
+            <p>Enlace interno hacia otra página de esta aplicación o web:  <a href="hola.html">Hacia la página interna Hola</a></p>
+            <p>Enlace a un sitio externo: <a href="https://google.com" target="_blank" rel="nofollow">Visita el navegador de Google</a>
+            </p>
+            <p>Enlace con una imagen: 
+            <a href="https://baesaudiovisual.com" target="_blank">
+              <img src="img/favicon.png" alt="Ir hacia audiovisual.com" width="40" height="40">
+            </a>
+            </p>
+            <p>Enlace con un SVG: 
+            <a href="https://baesaudiovisual.com" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill="currentColor" />
+                    <path d="M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z" fill="currentColor" />
+                    <path d="M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z" fill="currentColor" />
+                </svg>
+            </a>
+            </p>
+            <p>Enlace a correo electrónico: <a href="mailto:alex@baesaudiovisual.com">Enlace al correo alex@baesaudiovisual.com</a>
+            </p>
+            <p>Enlace a teléfono: <a href="tel:5215512345678">+34 666 666 666</a>
+            </p>
+            <p>Enlace a WhatsApp: <a href="https://api.whatsapp.com/send?phone=5215512345678&text=Hola">Hablemos por WhatsApp!</a>
+            </p>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="elementos-interactivos">Elementos Interactivos</h2>
+            <dl>
+                <dt>&lt;button&gt;</dt>
+                <dd>Elemento interactivo activado por el usuario con el mouse, teclado, dedo o comando de voz, y una vez activado realiza una acción. Puede tener varios atributos. <br><br>
+                    <button name="button" type="button">Click !</button>
+                </dd>
+                <dt>&lt;details&gt; y &lt;summary&gt; </dt>
+                <dd>Elemento interactivo en el cual la información es visible cuando cambia de estado a "abierto". Se debe utilizar la etiqueta &lt;summary&gt; para desplegar la información.  <br><br>
+                    <details>
+                        <summary>Información del sistema</summary>
+                        <p>Se requiere un ordenador operativo con 32 GB de RAM</p>
+                    </details>
+                </dd>
+                <dt>&lt;dialog&gt;</dt>
+                <dd>Elemento interactivo que representa un cuadro de diálogo u otro componente interactivo cómo una alerta o subventana. Se suele añadir un formulario en su interior y trabajar con JavaScript <br><br>
+                    <dialog open>
+                        <p>Hola, bienvenido!</p>
+                        <form method="dialog">
+                          <button>Cerrar</button>
+                        </form>
+                      </dialog>
+                </dd>
+                <dt>&lt;progress&gt;</dt>
+                <dd>Elemento interactivo que muestra el proceso de finalización de una tarea, normalmente se muestra cómo una barra de progreso. Utiliza los atributos 'max' y 'value' para indicar el progreso.<br><br>
+                    <label for="file">Barra de progreso</label>
+                    <progress id="file" max="100" value="70"> 70% </progress>
+                </dd>
+                <dt>&lt;meter&gt;</dt>
+                <dd>Elemento interactivo que representa un valor escalar dentro de un rango o valor fraccionario. Utiliza atributos cómo 'min', 'max', 'low', 'high', 'optimum', 'value'.<br><br>
+                        Calienta el horno a <meter min="200" max="500" value="350">350 degrees</meter>.
+                </dd>
+                <dt>&lt;datalist&gt;</dt>
+                <dd>Elemento interactivo que contiene un conjunto de elementos &lt;datalist&gt; que representan las opciones permitidas o disponsibles para elegir. <br><br>
+                    <label for="helados">Escoge un sabor:</label>
+                    <input list="sabores-helados" id="helados" name="helados">
+                    <datalist id="sabores-helados">
+                        <option value="Chocolate">
+                        <option value="Iogurt">
+                        <option value="Menta">
+                        <option value="Fresa">
+                        <option value="Vainilla">
+                    </datalist>
+                </dd>
+            </dl>
+
+            <!--CODE !!!-->
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="multimedia">Multimedia</h2>
+            <dl>
+                <dt>&lt;audio&gt;</dt>
+                <dd>Se utiliza para incrustar contenido de sonidos en el documento, utilizando el atributo 'src' o la etiqueta &lt;source&gt; se pueden añadir varias fuentes de audio. Hay varios atributos para controlar el audio.
+                    Con la etiqueta  &lt;audio&gt; se puede utilizar  &lt;track&gt; para añadir subtítulos, descripciones de audio o textos relacionados con el contenido. <br><br>
+                    <audio controls preload="auto">
+                        <source src="media/audio.mp3" type="audio/mpeg">
+                        <track kind="captions" src="ruta/al/archivo/subtitulos.vtt" srclang="es" label="Español">
+                        Tu navegador no soporta la etiqueta audio
+                      </audio>
+                </dd>
+                <dt>&lt;video&gt;</dt>
+                <dd>Se utiliza para incorporar un reproductor multimedia que admite la reproducción de vídeo en el documento. También cuenta con atributos, y las etiquetas &lt;source&gt; y &lt;track&gt;<br><br>
+                    <video controls width="300">
+                        <source src="/media/video.mp4" type="video/mp4">
+                        Download <a href="/media/video.mp4">MP4</a> video.
+                    </video>
+                </dd>
+                <dt>&lt;embed&gt;</dt>
+                <dd>Se utiliza para incrustar contenido interno o externo en el punto especificado del documento, cuenta con varios atributos cómo 'src', 'type', 'title', 'height', 'width'.<br><br>
+                    <embed type="video/webm" src="/media/video.mp4" width="250" height="200">
+                </dd>
+                <dt>&lt;iframe&gt;</dt>
+                <dd>Se utiliza para incrustar una parte de otra página HTML en la actual. Hay que vigilar el uso de esta etiqueta para no perder rendimiento de la página.<br><br>
+                    <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="300"
+                    height="200"
+                    loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.056593576877!2d2.358506515674757!3d48.86652867928849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f49763387f7%3A0x10e829c6d87fb3d5!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1652847878804!5m2!1sen!2sus">
+                </iframe>
+                </dd>   
+                <dt>&lt;object&gt;</dt>
+                <dd>Se utiliza para incrustar varios tipos de contenido en el documento, cómo vídeos, imágenes, documentos, etc. Se debe especificar el tipo con el atributo 'type'. <br><br>
+                    <object data="media/pdf.pdf" type="application/pdf" width="300" height="400"></object>
+                </dd>        
+            </dl>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+        <section>
+            <h2 id="formularios">Formularios</h2>
+            <h3>Tipos de campos de formulario</h3>
+            <dl>
+                <dt>Text</dt>
+                <dd><input type="text" placeholder="Texto"></dd>
+                <dt>Checkbox</dt>
+                <dd><input type="checkbox"></dd>
+                <dt>Radio</dt>
+                <dd><input type="radio"></dd>
+                <dt>Fecha</dt>
+                <dd><input type="date"></dd>
+                <dt>Colores</dt>
+                <dd><input type="color"></dd>
+                <dt>Botón</dt>
+                <dd>
+                    <input type="button" value="Botón">
+                    <input type="submit">
+                    <input type="reset">
+                </dd>
+                <dt>Subir archivo/s</dt>
+                <dd>
+                    <input type="file">
+                    <input type="file" multiple>
+                </dd>
+                <dt>Escondido</dt>
+                <dd><input type="hidden"></dd>
+                <dt>Email</dt>
+                <dd><input type="email"></dd>
+                <dt>Número</dt>
+                <dd><input type="number"></dd>
+                <dt>Teléfono</dt>
+                <dd><input type="tel"></dd>
+                <dt>Contraseña</dt>
+                <dd><input type="password"></dd>
+                <dt>Buscador</dt>
+                <dd><input type="search"></dd>
+                <dt>Textarea</dt>
+                <dd><textarea cols="20" rows="3"></textarea></dd>
+                <dt>Selector</dt>
+                <dd>
+                    <select name="" id="">
+                        <option value="">HTML</option>
+                        <option value="">CSS</option>
+                        <option value="">JS</option>
+                        <option value="">PHP</option>
+                        <option value="">Python</option>
+                    </select>
+                </dd>
+                <dt>Selector múltiple</dt>
+                <dd>
+                    <select name="" id="" multiple>
+                        <option value="">HTML</option>
+                        <option value="">CSS</option>
+                        <option value="">JS</option>
+                        <option value="">PHP</option>
+                        <option value="">Python</option>
+                    </select>
+                </dd>
+                <dt>Sólo lectura</dt>
+                <dd><input type="text" value="alex barbera" readonly disabled></dd>
+            </dl>
+
+            <h3>Ejemplo de Formularios</h3>
+            <h4>Formulario de Login</h4>
+            <form action="https://baesaudiovisual.com/" method="POST" autocomplete="off">
+              <label for="usuario">Usuario: </label>
+              <input type="text" name="usuario" id="usuario" placeholder="Escribe tu usuario" pattern="^[A-Za-z]+$"
+                title="El campo sólo acepta letras" required>
+              <br>
+              <!-- <input type="text" name="email" autocomplete="off"> -->
+              <label for="password">Password: </label>
+              <input type="password" name="password" id="password" placeholder="Escribe tu password" required>
+              <br>
+              <input type="submit">
+              <br>
+              <input type="reset">
+            </form>
+            <h4>Selects, Radios y Checkbox</h4>
+            <form>
+              <p>Elige tu idioma:</p>
+              <select name="idioma" required>
+                <option value="" selected>Elige una opción</option>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Portugués</option>
+              </select>
+              <p>Elige tu lenguaje de programación favorito:</p>
+              <fieldset>
+                <legend>Elige un monstruo</legend>
+            
+                <input type="radio" id="kraken" name="monster" value="K">
+                <label for="kraken">Kraken</label><br>
+            
+                <input type="radio" id="sasquatch" name="monster" value="S">
+                <label for="sasquatch">Yeti</label><br>
+            
+                <input type="radio" id="mothman" name="monster" value="M">
+                <label for="mothman">Momia</label>
+              </fieldset>
+              <p>Elige tus intereses:</p>
+              <label>
+                <input type="checkbox" name="intereses" value="deportes">
+                Deportes
+              </label>
+              <label>
+                <input type="checkbox" name="intereses" value="finanzas" checked>
+                Finanzas
+              </label>
+              <label>
+                <input type="checkbox" name="intereses" value="salud">
+                Salud
+              </label>
+              <label>
+                <input type="checkbox" name="intereses" value="politica">
+                Política
+              </label>
+              <label>
+                <input type="checkbox" name="intereses" value="economía" checked>
+                Ecología
+              </label>
+              <p>
+                <label>
+                  <input type="checkbox" name="terminos" required>
+                  ¿Aceptas términos y condiciones?
+                </label>
+              </p>
+              <input type="submit">
+              <input type="reset">
+            </form>
+            <h4>Formulario de Contacto</h4>
+            <!-- https://formsubmit.co/ -->
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+              <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                title="Nombre sólo acepta letras y espacios en blanco" required>
+              <br>
+              <input type="email" name="correo" placeholder="Escribe tu correo" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+                title="Formato de correo inválido" required>
+              <br>
+              <textarea name="comentarios" cols="30" rows="10" required></textarea>
+              <br>
+              <input type="submit">
+            </form>
+            <br>
+            <a href="index.html#inicio">☝️</a>
+
+        </section>
+        <section>
+            <h2 id="elementos-avanzados">Elementos avanzados</h2>
+            <dl>
+                <dt>&lt;map&gt; y &lt;area&gt;</dt>
+                <dd>Elemento interactivo que se utiliza con &lt;area&gt; para definir un mapa de imagen, es decir, una area de enlace que se puede hacer clic. &lt;area&gt; define un mapa dentro de una imagen con distintas zonas para clicar. <br><br>
+                    <map name="infographic">
+                        <area shape="poly" coords="130,147,200,107,254,219,130,228"
+                              href="https://developer.mozilla.org/docs/Web/HTML"
+                              target="_blank" alt="HTML">
+                        <area shape="poly" coords="130,147,130,228,6,219,59,107"
+                              href="https://developer.mozilla.org/docs/Web/CSS"
+                              target="_blank" alt="CSS">
+                        <area shape="poly" coords="130,147,200,107,130,4,59,107"
+                              href="https://developer.mozilla.org/docs/Web/JavaScript"
+                              target="_blank" alt="JavaScript">
+                    </map>
+                    <img usemap="#infographic" src="/img/triangle.png" alt="Infographic">
+                </dd>
+                <dt>&lt;canvas&gt;</dt>
+                <dd>Se utiliza junto la API de canva o la de WebGL para dibujar gráficos y animaciones. Necesita utilizarse JavaScript para dibujar.<br><br>
+                    <canvas width="300" height="300">
+                        Así se añade un elemento canva al document HTML. Este texto se muestra si no se puede renderizar o leer el canva.
+                      </canvas>
+                </dd>
+                <dt>&lt;template&gt;</dt>
+                <dd> Se utiliza para definir fragmentos de código HTML que se pueden clonar y utilizar varias veces con JavaScript. Requiere el uso de JavaScript.<br><br>
+                    <template id="miPlantilla">
+                        <div class="articulo">
+                          <h2 class="titulo"></h2>
+                          <p class="descripcion"></p>
+                        </div>
+                      </template>
+                </dd>
+                <dt>&lt;slot&gt;</dt>
+                <dd> Se utiliza para crear puntos de inserción en un componente web en el que se puede colocar contenido dinámico.<br><br>
+                    <!-- Componente de artículo -->
+                    <template>
+                        <div>
+                        <h2><slot name="titulo">Título por defecto</slot></h2>
+                        <p><slot name="descripcion">Descripción por defecto</slot></p>
+                        </div>
+                    </template>
+                    
+                    <!-- Uso del componente de artículo -->
+                    <articulo>
+                        <h5 slot="titulo">Mi artículo</h5>
+                        <p slot="descripcion">Este es el contenido de mi artículo.</p>
+                    </articulo>
+                </dd>
+                <dt>&lt;output&gt;</dt>
+                <dd>Crea un contenedor en el que un sitio web puede inyectar los resultados de un cálculo o de una acción del usuario..<br><br>
+                    <p>Calculadora para sumar</p>
+                    <form oninput="resultado.value=parseInt(numero1.value) + parseInt(numero2.value)">
+                        <label for="numero1">Número 1:</label>
+                        <input type="number" id="numero1" name="numero1" value="0">
+                        <br>
+                        <label for="numero2">Número 2:</label>
+                        <input type="number" id="numero2" name="numero2" value="0">
+                        <br>
+                        <label for="resultado">Resultado:</label>
+                        <output name="resultado" id="resultado" for="numero1 numero2"></output>
+                      </form>
+                </dd>
+                <dt>&lt;noscript&gt;</dt>
+                <dd>Define una sección de HTML que se insertará si un 'script' no es compatible o si está desactivado la opción de 'permitir scripts'. 
+                    <noscript>
+                        <a href="https://www.mozilla.org/">Link externo</a>
+                      </noscript>
+                      <p>Funciona!</p>              
+                </dd>
+                
+            </dl>
+        </section>
+        <section>
+            <h2 id="atributos">Atributos</h2>
+            <h3>Atributos Globales</h3>
+            <p>Los atributos globales son atributos comunes a todos los elementos HTML; se pueden usar en todos los elementos, aunque es posible que no tengan ningún efecto en algunos.</p>
+            <ol>
+                <li><strong>accesskey:</strong> Define una tecla de acceso rápido para el elemento</li>
+                <li><strong>autocapitalize:</strong> Controla la capitalización automática del teclado en dispositivos móviles</li>
+                <li><strong>autofocus:</strong> Hace que el elemento tenga el enfoque automático cuando se carga la página</li>
+                <li><strong>class:</strong> Define una o más clases CSS para el elemento</li>
+                <li><strong>contenteditable:</strong> Indica si el contenido es editable o no</li>
+                <li><strong>data-*:</strong> Atributo personalizado que permite la inclusión de datos adicionales en un elemento HTML</li>
+                <li><strong>dir:</strong> Indica la dirección de ltexto para el elemento</li>
+                <li><strong>draggable:</strong> Indica si el elemento se puede arrastrar o no</li>
+                <li><strong>enterkeyhint:</strong> Controla la presentación de la tecla Enter en el teclado virtual en dispositivos móviles</li>
+                <li><strong>exportparts:</strong> Define los nombres de los fragmentos de esetilo CSS que se pueden exportar desde el elemento</li>
+                <li><strong>hidden:</strong> Indica si el elemento debe ocultarse o no</li>
+                <li><strong>id:</strong> Define un identificador único para el elemento</li>
+                <li><strong>inert:</strong> Indica que el elemento no puede recibir eventos y no debe ser enfocado</li>
+                <li><strong>inputmode:</strong> Indica el modo de entrada para el elemento, cómo "texto", "número" o "teléfono"</li>
+                <li><strong>is:</strong> Especifica el tipo de elemento personalizado que se está utilizando</li>
+                <li><strong>itemid:</strong> identifica un elemento HTML como una entidad única y proporciona un URI permanente</li>
+                <li><strong>itemprop:</strong> Define una propiedad específica de un elemento HTML para su uso con microdatos</li>
+                <li><strong>itemref:</strong> Especifica los identificadores de otros elementos que describen el elemento actual con microdatos</li>
+                <li><strong>itemscope:</strong> Indica que un elemento HTML representa un objeto independiente y distinto con microdatos</li>
+                <li><strong>itemtype:</strong> Indentifica el tipo de elemento HTML para su uso con microdatos</li>
+                <li><strong>lang:</strong> Indica el idioma principal utilizado en el contenido y los atributos del elemento </li>
+                <li><strong>nonce:</strong> Permite especificar un valor de número utilizado por los mecanismos de seguirdad de contenido</li>
+                <li><strong>part:</strong> Define los fragmentos de estilo de CSS que se pueden aplicar a un elemento</li>
+                <li><strong>slot:</strong> Define el nombre de un slot de contenido donde se puede insertar elementos hijos</li>
+                <li><strong>spellcheck:</strong> Indica si el elemento debe ser verificado ortográficamente o no</li>
+                <li><strong>style:</strong> Define estilos CSS en línea para el elemento</li>
+                <li><strong>tabindex:</strong> Indica el orden de tabulación del elemento</li>
+                <li><strong>title:</strong> Define información adicional sobre el elemento</li>
+                <li><strong>translate:</strong> Indica si el elemento y su contenido deben ser traducidos o no</li>
+            </ol>
+            <h4>Atributos de información</h4>
+            <p>Los atributos de información (data attributes) son atributos personalizados que se pueden agregar a los elementos HTML para almacenar información adicional que no tiene un propósito semántico específico. <br>
+                Son útiles para almacenar información específica de la aplicación, como configuraciones, identificadores de objetos o información que se necesita para operaciones de JavaScript. <br>
+                Para acceder a los valores de los atributos de datos, se puede utilizar JavaScript o CSS. En JavaScript, se puede acceder a los atributos de datos utilizando el método "getAttribute('data-nombre-atributo')" y para establecer su valor, se utiliza el método "setAttribute('data-nombre-atributo', 'valor')" en el objeto del elemento HTML correspondiente. </p>
+            <ul>
+                <li data-id="1" data-name="spring">Primavera</li>
+                <li data-id="2" data-name="summer">Verano</li>
+                <li data-id="3" data-name="autumn">Otoño</li>
+                <li data-id="4" data-name="winter">Invierno</li>
+              </ul>
+            <h3>Atributos</h3>
+            <p>Estos atributos sólo se aplican a ciertos elementos</p>
+            <ol>
+                <li><strong>accept:</strong> Especifica los tipos de archivos que se pueden seleccionar en un cuadro de diálogo de archivo</li>
+                <li><strong>alt:</strong> Especifica un texto alternativo para la imagen en caso de que no se pueda mostrar</li>
+                <li><strong>async:</strong> Indica que el script se descargará de forma asíncrona mientras se analiza el resto del contenido del documento</li>
+                <li><strong>autocomplete:</strong> Indica si el elemento debe tener una función de autocompletado habilitada o no</li>
+                <li><strong>capture:</strong> Especifica si se debe capturar la entrada del usuario utilizando la cámara o el micrófono del dispositivo</li>
+                <li><strong>checked:</strong> Indica que el elemento está seleccionado por defecto, como en el caso de un botón de radio o una casilla de verificación</li>
+                <li><strong>cols:</strong> Especifica el número visible de columnas de texto para el elemento 'textarea'</li>
+                <li><strong>crossorigin:</strong> Especifica si se permite la carga de recursos a través de una política de intercambio de recursos de origen cruzado (CORS)</li>
+                <li><strong>disabled:</strong> Indica que el elemento está desactivado y no se puede interactuar</li>
+                <li><strong>elementtiming:</strong> Especifica el tiempo de carga del elemento</li>
+                <li><strong>for:</strong> Se utiliza en una etiqueta 'label' para especificar el control al que se hace referencia</li>
+                <li><strong>href:</strong> Especifica la URL de destino del enlace para el elemento 'a'</li>
+                <li><strong>max:</strong> Especifica el valor máximo permitido para el elemento</li>
+                <li><strong>maxlength:</strong> Especifica el número máximo de caracteres permitidos para el campo de entrada de texto</li>
+                <li><strong>method:</strong> Especifica el método HTTP utilizado para enviar el formulario</li>
+                <li><strong>min:</strong> Especifica el valor mínimo permitido para el elemento</li>
+                <li><strong>minlength:</strong> Especifica el número mínimo de caracteres permitidos para el campo de entrada de texto</li>
+                <li><strong>multiple:</strong> Permite seleccionar varios archivos a la vez en el elemento 'input' de tipo "archivo"</li>
+                <li><strong>pattern:</strong> Especifica un patrón que debe seguir el valor del elemento</li>
+                <li><strong>readonly:</strong> Indica que el campo de entrada de texto es solo de lectura y no se puede modificar</li>
+                <li><strong>rel:</strong> Especifica la relación entre la página actual y el destino en el elemento 'a'</li>
+                <li><strong>rows:</strong> Especifica el número visible de filas de texto para el elemento 'textarea'</li>
+                <li><strong>required:</strong> Indica que el campo de texto de entrada es obligatorio y debe ser completado antes de enviar el formulario</li>
+                <li><strong>selected:</strong> Indica que la opción del elemento 'select' está seleccionada por defecto </li>
+                <li><strong>size:</strong> Especifica el ancho visible del campo de entrada de texto</li>
+                <li><strong>step:</strong> Especifica el incremento entre los valores permitidos para el elemento</li>
+                <li><strong>type: </strong>Especifica el tipo de elemento, por ejempolo, "texto", "botón", "submit", "checkbox", etc</li>
+                <li><strong>value: </strong> Especifica el valor del elemento</li>
+
+            </ol>
+        </section>
+        <section>
+            <h2 id="accesibilidad">Accesibilidad Web</h2>
+            <p>Atributos para mejorar la accesibilidad</p>
+            <ol>
+                <li><strong>role:</strong> Son utilizados para definir el papel semántico que desempeña el elemento en la página web. Son parte de la especificación WAI-ARIA y se utilizan para mejorar la accesibilidad de la página. </li>
+                <li><strong>aria-*: </strong> Proporciona información adicional a los lectores de pantalla y otros dispositivos de asistencia sobre la función y el estado de un elemento HTML</li>
+                <li><strong>tabindex: </strong> Se utiliza para establecer el orden de tabulación de los elementos de una página web. Esto es útil para los usuarios que navegan por el sitio web con el teclado.</li>
+                <li><strong>alt: </strong> Se utiliza para proporcionar una descripción alternativa de una imagen o un elemento multimedia. Los lectores de pantalla pueden leer el texto alternativo en lugar de la imagen para usuarios con discapacidad visual.</li>
+                <li><strong>title: </strong> Se utiliza para proporcionar información adicional sobre un elemento</li>
+                <li><strong>lang: </strong> Se utiliza para especificar el idioma de un elemento en una página web. Esto es útil para los usuarios que utilizan lectores de pantalla en otros idiomas.</li>
+            </ol>
+            <p>Ejemplos</p>
+            <h3 role="title">Las estaciones del año</h3>
+            <ul role="list">
+              <li tabindex="1" role="listitem">Primavera</li>
+              <li tabindex="2" role="listitem">Verano</li>
+              <li tabindex="4" role="listitem">Otoño</li>
+              <li tabindex="3" role="listitem">Invierno</li>
+            </ul>
+            <a role="link" aria-label="En este enlace encontrarás más información sobre las estaciones del año" href="#"
+              target="_blank">Más información...</a>
+            <!--
+                  https://web.dev/accessible/
+                  https://html5accessibility.com/
+                  https://www.w3.org/blog/news/archives/8889
+                  https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/videos
+                   -->
+            <br>
+            <a href="index.html#inicio">☝️</a>
+        </section>
+    </main>
+
+    <footer>Creado por Àlex Barberà</footer>
+</body>
+</html>
